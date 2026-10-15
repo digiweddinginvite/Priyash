@@ -3069,6 +3069,42 @@ footer {
         margin-top: 6px;
     }
 }
+
+/* REMOVE BLUE TAP HIGHLIGHT ACROSS THE ENTIRE WEBSITE */
+*,
+*::before,
+*::after {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+html,
+body,
+body * {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Remove default blue focus outlines and browser focus shadows */
+a:focus,
+a:active,
+button:focus,
+button:active,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* Prevent blue text selection highlight */
+::selection {
+    background: rgba(184, 137, 60, 0.18);
+    color: inherit;
+}
+
+::-moz-selection {
+    background: rgba(184, 137, 60, 0.18);
+    color: inherit;
+}
 </style>
 
 </head>
