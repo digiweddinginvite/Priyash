@@ -567,9 +567,7 @@ button {
 
 
 /* =========================================================
-   HERO — SCROLL DOWN INDICATOR  (UPDATED: pill background)
-   NOTE: these rules now live OUTSIDE the mobile media query
-   so they apply on every screen size.
+   HERO — SCROLL DOWN INDICATOR
 ========================================================= */
 
 .hero-scroll {
@@ -601,8 +599,6 @@ button {
     text-transform: uppercase;
     white-space: nowrap;
     color: #FFF9F0;
-
-    /* --- NEW: readable pill background --- */
     padding: 9px 20px;
     border-radius: 999px;
     background: rgba(36, 16, 25, .58);
@@ -650,17 +646,14 @@ button {
     }
 }
 
-/* Hide during cinematic hero entrance */
 .parallax.hero-intro .hero-scroll {
     opacity: 0;
     transform: translateX(-50%) translateY(18px);
     pointer-events: none;
 }
 
-/* Reveal after hero entrance */
 .parallax.hero-intro.play .hero-scroll {
-    animation:
-        heroScrollReveal .9s cubic-bezier(.22,.61,.36,1) 1.85s forwards;
+    animation: heroScrollReveal .9s cubic-bezier(.22,.61,.36,1) 1.85s forwards;
     pointer-events: auto;
 }
 
@@ -1224,8 +1217,9 @@ button {
 }
 
 /* ---------------------------------------------------------
-   LUNCH NOTE — appears right after the Muhurtham time
+   LUNCH NOTE
 --------------------------------------------------------- */
+
 .muhurtham-lunch {
     width: 100%;
     margin: 6px 0 2px;
@@ -1445,7 +1439,6 @@ button {
     vertical-align: middle;
 }
 
-/* Details grid: TIME | ADDRESS (VENUE removed) */
 #events .event-details {
     grid-column: 2;
     margin: 0 20px 22px;
@@ -1668,7 +1661,6 @@ button {
         font-size: clamp(36px, 10vw, 48px);
     }
 
-    /* Mobile: single column stack — TIME on top, ADDRESS below */
     #events .event-details {
         margin: 0 13px 18px;
         grid-template-columns: 1fr;
@@ -2056,6 +2048,7 @@ button {
     position: relative;
     z-index: 2;
 }
+
 .rsvp-ornament::before,
 .rsvp-ornament::after {
     content: "";
@@ -2063,6 +2056,7 @@ button {
     height: 1px;
     background: rgba(224, 184, 92, 0.6);
 }
+
 .rsvp-ornament span {
     font-size: 16px;
     line-height: 1;
@@ -2093,7 +2087,9 @@ button {
     display: none;
 }
 
-#rsvpGuestsField > label {
+/* Display labels for both number counters */
+#rsvpGuestsField > label,
+#rsvpKidsField > label {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -2348,12 +2344,14 @@ button {
     .rsvp-card {
         padding: 25px 20px;
     }
+
     .rsvp-field input,
     .rsvp-field select,
     .rsvp-field textarea {
         padding: 14px 16px;
         font-size: 16px;
     }
+
     .rsvp-submit {
         padding: 16px 20px;
         font-size: 11px;
@@ -2370,7 +2368,8 @@ button {
         font-size: 20px;
     }
 
-    #rsvpGuestsField > label {
+    #rsvpGuestsField > label,
+    #rsvpKidsField > label {
         font-size: 9px;
         letter-spacing: 2px;
     }
@@ -2644,9 +2643,6 @@ footer {
     color: #E5D5CA;
 }
 
-/* ---------------------------------------------------------
-   #PRIYASH HASHTAG — elegant gold script-style display
---------------------------------------------------------- */
 .footer-hashtag {
     display: inline-flex;
     align-items: center;
@@ -3077,12 +3073,9 @@ footer {
 
 </head>
 
-
 <body>
 
-<!-- =====================================================
-     INTRO SCREEN
-===================================================== -->
+<!-- INTRO SCREEN -->
 
 <div class="firstsection" id="firstsection">
     <img src="assets/goddesshand2.png" class="hand goddess" alt="">
@@ -3091,10 +3084,7 @@ footer {
     <div class="divine-light"></div>
 </div>
 
-
-<!-- =====================================================
-     WEDDING MUSIC
-===================================================== -->
+<!-- WEDDING MUSIC -->
 
 <audio id="weddingMusic" preload="auto" loop>
     <source src="audio/music1.mpeg" type="audio/mpeg">
@@ -3114,38 +3104,37 @@ footer {
     <span class="music-status" aria-hidden="true">OFF</span>
 </button>
 
-
-<!-- =====================================================
-     SECTION 1 - HERO
-===================================================== -->
+<!-- SECTION 1 - HERO -->
 
 <div class="parallax hero-intro" id="hero">
     <div class="sky"></div>
+
     <div class="parallax-layer temple" id="temple">
         <img src="assets/templebg.png" alt="Temple Background">
     </div>
+
     <div class="parallax-layer couple" id="couple">
         <img src="assets/coupleimg.png" alt="Ashwith Weds Priyanka">
     </div>
+
     <div class="parallax-layer trees" id="trees">
         <img src="assets/treesbg.png" alt="Trees Foreground">
     </div>
+
     <div class="title" id="title">
         <h1>Ashwith &amp; Priyanka</h1>
         <p>Wedding Invitation</p>
     </div>
-  <div class="hero-scroll" aria-label="Scroll down to celebrate with us">
-    <a href="#couple-section">
-        <span>Scroll down to celebrate with us</span>
-        <i></i>
-    </a>
-</div>
+
+    <div class="hero-scroll" aria-label="Scroll down to celebrate with us">
+        <a href="#couple-section">
+            <span>Scroll down to celebrate with us</span>
+            <i></i>
+        </a>
+    </div>
 </div>
 
-
-<!-- =====================================================
-     SECTION 2 - BRIDE & GROOM
-===================================================== -->
+<!-- SECTION 2 - BRIDE & GROOM -->
 
 <section class="section" id="couple-section">
     <div class="section-inner">
@@ -3168,6 +3157,7 @@ footer {
                 <div class="couple-photo reveal">
                     <img src="assets/GroomImg.png" alt="Ashwith Reddy Gollamada">
                 </div>
+
                 <div class="couple-info reveal">
                     <div class="person-role">The Groom</div>
                     <h3>
@@ -3197,6 +3187,7 @@ footer {
                         <strong>Smt. Muthyala Sharadha</strong>
                     </p>
                 </div>
+
                 <div class="couple-photo reveal">
                     <img src="assets/BrideImg.png" alt="Priyanka Reddy Muthyala">
                 </div>
@@ -3205,10 +3196,7 @@ footer {
     </div>
 </section>
 
-
-<!-- =====================================================
-     SECTION 3 - MUHURTHAM
-===================================================== -->
+<!-- SECTION 3 - MUHURTHAM -->
 
 <section class="section" id="muhurtham">
     <div class="section-inner">
@@ -3274,12 +3262,7 @@ footer {
     </div>
 </section>
 
-
-
-
-<!-- =====================================================
-     SECTION 5 - VENUE
-===================================================== -->
+<!-- SECTION 5 - VENUE -->
 
 <section class="section" id="venue">
     <div class="section-inner">
@@ -3297,10 +3280,7 @@ footer {
     </div>
 </section>
 
-
-<!-- =====================================================
-     SECTION 5B - RSVP
-===================================================== -->
+<!-- SECTION 5B - RSVP -->
 
 <section class="section" id="rsvp">
     <div class="section-inner">
@@ -3339,6 +3319,8 @@ footer {
                     </select>
                 </div>
 
+                <!-- ADULT / GUEST COUNTER -->
+
                 <div class="rsvp-field" id="rsvpGuestsField">
                     <label for="rsvpGuests">Number of Guests Attending</label>
 
@@ -3372,6 +3354,41 @@ footer {
                     </div>
                 </div>
 
+                <!-- NEW KIDS COUNTER -->
+
+                <div class="rsvp-field" id="rsvpKidsField">
+                    <label for="rsvpKids">Number of Kids Attending</label>
+
+                    <div class="rsvp-stepper">
+                        <button
+                            type="button"
+                            class="rsvp-stepper-btn"
+                            id="kidsMinus"
+                            aria-label="Decrease number of kids attending"
+                        >−</button>
+
+                        <input
+                            type="number"
+                            id="rsvpKids"
+                            name="kids"
+                            min="0"
+                            max="20"
+                            step="1"
+                            value="0"
+                            inputmode="numeric"
+                            aria-label="Number of Kids Attending"
+                            readonly
+                        >
+
+                        <button
+                            type="button"
+                            class="rsvp-stepper-btn"
+                            id="kidsPlus"
+                            aria-label="Increase number of kids attending"
+                        >+</button>
+                    </div>
+                </div>
+
                 <div class="rsvp-field">
                     <label for="rsvpMessage">Message for the Couple <span class="optional">(optional)</span></label>
                     <textarea
@@ -3398,10 +3415,7 @@ footer {
     </div>
 </section>
 
-
-<!-- =====================================================
-     SECTION 6 - COUNTDOWN
-===================================================== -->
+<!-- SECTION 6 - COUNTDOWN -->
 
 <section class="section" id="countdown">
     <div class="section-inner">
@@ -3435,10 +3449,7 @@ footer {
     </div>
 </section>
 
-
-<!-- =====================================================
-     SECTION 7 - FOOTER
-===================================================== -->
+<!-- SECTION 7 - FOOTER -->
 
 <footer>
     <div class="footer-names">Ashwith &amp; Priyanka</div>
@@ -3449,9 +3460,6 @@ footer {
         our wedding celebration even more special.
     </div>
 
-    <!-- =============================================
-         #PRIYASH HASHTAG
-    ============================================== -->
     <div class="footer-hashtag" aria-label="Wedding hashtag Priyash">
         <span class="hash">#</span>PRIYASH
     </div>
@@ -3462,14 +3470,15 @@ footer {
 </footer>
 
 
-<!-- =====================================================
+<!-- =========================================================
      JAVASCRIPT
-===================================================== -->
+========================================================= -->
 
 <script>
 /* =========================================================
    HERO PARALLAX
 ========================================================= */
+
 const temple = document.getElementById("temple");
 const couple = document.getElementById("couple");
 const trees = document.getElementById("trees");
@@ -3484,18 +3493,22 @@ window.addEventListener("scroll", () => {
 
 function render() {
     current += (target - current) * 0.08;
+
     trees.style.transform = `translate3d(0, ${current * 0.75}px, 0)`;
     title.style.transform = `translate3d(-50%, ${current * 0.55}px, 0)`;
     couple.style.transform = `translate3d(-50%, ${current * 0.45}px, 0)`;
     temple.style.transform = `translate3d(-50%, ${current * 0.25}px, 0)`;
+
     requestAnimationFrame(render);
 }
+
 render();
 
 
 /* =========================================================
-   HERO INTRO — PLAYED ONLY AFTER THE INTRO SCREEN IS TAPPED
+   HERO INTRO
 ========================================================= */
+
 const hero = document.getElementById("hero");
 
 function playHeroIntro() {
@@ -3514,7 +3527,9 @@ function playHeroIntro() {
 /* =========================================================
    SCROLL REVEAL
 ========================================================= */
+
 const revealElements = document.querySelectorAll(".reveal");
+
 const revealObserver = new IntersectionObserver(
     (entries) => {
         entries.forEach(entry => {
@@ -3525,6 +3540,7 @@ const revealObserver = new IntersectionObserver(
     },
     { threshold: 0.12 }
 );
+
 revealElements.forEach(element => {
     revealObserver.observe(element);
 });
@@ -3533,6 +3549,7 @@ revealElements.forEach(element => {
 /* =========================================================
    MUHURTHAM PARALLAX
 ========================================================= */
+
 const muhurthamSection = document.getElementById("muhurtham");
 const muhurthamCouple = document.getElementById("muhurthamCouple");
 const muhurthamBg = document.querySelector(".muhurtham-bg");
@@ -3555,7 +3572,9 @@ function updateMuhurthamParallax() {
     muhurthamScrollTarget += (progress - muhurthamScrollTarget) * 0.12;
     const p = muhurthamScrollTarget;
 
-    muhurthamCouple.style.transform = `translate3d(${(1 - p) * 80}%, 0, 0)`;
+    muhurthamCouple.style.transform =
+        `translate3d(${(1 - p) * 80}%, 0, 0)`;
+
     muhurthamCouple.style.opacity = String(clamp(p * 2.5, 0, 1));
     muhurthamBg.style.transform = `translate3d(0, ${-8 * p}px, 0)`;
 }
@@ -3564,12 +3583,12 @@ function muhurthamParallaxLoop() {
     updateMuhurthamParallax();
     requestAnimationFrame(muhurthamParallaxLoop);
 }
+
 muhurthamParallaxLoop();
 
 
 /* =========================================================
    WEDDING MUSIC
-   iOS-SAFE USER-GESTURE START
 ========================================================= */
 
 const weddingMusic = document.getElementById("weddingMusic");
@@ -3586,16 +3605,12 @@ function updateMusicButton(isPlaying) {
 
     musicToggle.setAttribute(
         "aria-label",
-        isPlaying
-            ? "Turn wedding music off"
-            : "Turn wedding music on"
+        isPlaying ? "Turn wedding music off" : "Turn wedding music on"
     );
 
     musicToggle.setAttribute(
         "title",
-        isPlaying
-            ? "Turn music off"
-            : "Turn music on"
+        isPlaying ? "Turn music off" : "Turn music on"
     );
 
     const status = musicToggle.querySelector(".music-status");
@@ -3605,43 +3620,24 @@ function updateMusicButton(isPlaying) {
     }
 }
 
-
-/* ---------------------------------------------------------
-   START MUSIC
---------------------------------------------------------- */
-
 function startWeddingMusic() {
-
     if (!weddingMusic) return;
-
-    /*
-     * IMPORTANT:
-     * On iOS Safari this function must be reached directly
-     * from the user's tap/click event.
-     */
 
     const playPromise = weddingMusic.play();
 
     if (playPromise !== undefined) {
-
         playPromise
             .then(() => {
-
                 musicStartedByGesture = true;
 
                 if (heroEntered) {
                     updateMusicButton(true);
                 }
-
             })
             .catch(() => {
-
                 updateMusicButton(false);
-
             });
-
     } else {
-
         musicStartedByGesture = true;
 
         if (heroEntered) {
@@ -3650,119 +3646,65 @@ function startWeddingMusic() {
     }
 }
 
-
-/* ---------------------------------------------------------
-   STOP MUSIC
---------------------------------------------------------- */
-
 function stopWeddingMusic() {
-
     if (!weddingMusic) return;
 
     weddingMusic.pause();
-
     updateMusicButton(false);
 }
 
-
-/* ---------------------------------------------------------
-   ENTER HERO
---------------------------------------------------------- */
-
 function enterHeroSection() {
-
     if (heroEntered) return;
 
     heroEntered = true;
 
     if (musicToggle) {
-
         musicToggle.classList.add("show");
-
-        musicToggle.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
+        musicToggle.setAttribute("aria-hidden", "false");
         musicToggle.removeAttribute("tabindex");
     }
-
-    /*
-     * Music has already been started from the user gesture.
-     * Only update the button state here.
-     */
 
     if (weddingMusic && !weddingMusic.paused) {
         updateMusicButton(true);
     }
 }
 
-
-/* ---------------------------------------------------------
-   AUDIO EVENTS
---------------------------------------------------------- */
-
 if (weddingMusic && musicToggle) {
-
     weddingMusic.addEventListener("play", () => {
-
-        if (heroEntered) {
-            updateMusicButton(true);
-        }
-
+        if (heroEntered) updateMusicButton(true);
     });
 
     weddingMusic.addEventListener("playing", () => {
-
-        if (heroEntered) {
-            updateMusicButton(true);
-        }
-
+        if (heroEntered) updateMusicButton(true);
     });
 
     weddingMusic.addEventListener("pause", () => {
-
         updateMusicButton(false);
-
     });
 
     weddingMusic.addEventListener("ended", () => {
-
         updateMusicButton(false);
-
     });
 
-
-    /* -----------------------------------------------------
-       MUSIC BUTTON
-    ----------------------------------------------------- */
-
     musicToggle.addEventListener("click", (event) => {
-
         event.preventDefault();
         event.stopPropagation();
 
         if (!heroEntered) return;
 
         if (weddingMusic.paused) {
-
             startWeddingMusic();
-
         } else {
-
             stopWeddingMusic();
-
         }
-
     });
-
 }
-
 
 
 /* =========================================================
    COUNTDOWN
 ========================================================= */
+
 const weddingDate = new Date("November 26, 2026 10:15:00").getTime();
 
 function updateCountdown() {
@@ -3787,6 +3729,7 @@ function updateCountdown() {
     document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
     document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
 }
+
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
@@ -3794,78 +3737,124 @@ setInterval(updateCountdown, 1000);
 /* =========================================================
    RSVP FORM → GOOGLE APPS SCRIPT
 ========================================================= */
-const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbzCjSML8Pwc36lqutgVpdNa8pJWem_GlpwDptdfFjHStmVHGMDYqJrPvtzs8tDtBatO/exec";
+
+const RSVP_ENDPOINT =
+    "https://script.google.com/macros/s/AKfycbxuYEDXreoYdoWS0-S-trEx2SGEnKZI0uhJyo1cfutzktYnQrxwxuH91WaNQo__TReO/exec";
 
 (function initRsvpForm() {
     const rsvpForm = document.getElementById("rsvpForm");
     if (!rsvpForm) return;
 
-    const submitBtn    = rsvpForm.querySelector(".rsvp-submit");
-    const statusEl     = document.getElementById("rsvpStatus");
-    const thanksEl     = document.getElementById("rsvpThanks");
+    const submitBtn = rsvpForm.querySelector(".rsvp-submit");
+    const statusEl = document.getElementById("rsvpStatus");
+    const thanksEl = document.getElementById("rsvpThanks");
     const thanksTextEl = document.getElementById("rsvpThanksText");
-    const attendingEl  = document.getElementById("rsvpAttending");
-    const guestsEl     = document.getElementById("rsvpGuests");
-    const guestsField  = document.getElementById("rsvpGuestsField");
-    const guestMinus   = document.getElementById("guestMinus");
-    const guestPlus    = document.getElementById("guestPlus");
-    const nameEl       = document.getElementById("rsvpName");
-    const messageEl    = document.getElementById("rsvpMessage");
+    const attendingEl = document.getElementById("rsvpAttending");
+
+    const guestsEl = document.getElementById("rsvpGuests");
+    const guestsField = document.getElementById("rsvpGuestsField");
+    const guestMinus = document.getElementById("guestMinus");
+    const guestPlus = document.getElementById("guestPlus");
+
+    const kidsEl = document.getElementById("rsvpKids");
+    const kidsField = document.getElementById("rsvpKidsField");
+    const kidsMinus = document.getElementById("kidsMinus");
+    const kidsPlus = document.getElementById("kidsPlus");
+
+    const nameEl = document.getElementById("rsvpName");
+    const messageEl = document.getElementById("rsvpMessage");
 
     const GUEST_MIN = 1;
     const GUEST_MAX = 20;
+    const KIDS_MIN = 0;
+    const KIDS_MAX = 20;
 
     function setStatus(message, isError) {
         if (!statusEl) return;
+
         statusEl.textContent = message || "";
         statusEl.classList.toggle("show", Boolean(message));
         statusEl.classList.toggle("error", Boolean(isError));
     }
 
     function updateStepperState() {
-        const current = Number(guestsEl.value) || 0;
+        const currentGuests = Number(guestsEl.value) || 0;
+        const currentKids = Number(kidsEl.value) || 0;
         const notAttending = attendingEl.value === "No";
 
-        if (guestMinus) {
-            guestMinus.disabled = notAttending || current <= GUEST_MIN;
-        }
-        if (guestPlus) {
-            guestPlus.disabled = notAttending || current >= GUEST_MAX;
-        }
+        guestMinus.disabled = notAttending || currentGuests <= GUEST_MIN;
+        guestPlus.disabled = notAttending || currentGuests >= GUEST_MAX;
+
+        kidsMinus.disabled = notAttending || currentKids <= KIDS_MIN;
+        kidsPlus.disabled = notAttending || currentKids >= KIDS_MAX;
     }
 
     function setGuests(nextValue) {
-        const clamped = Math.min(GUEST_MAX, Math.max(GUEST_MIN, nextValue));
+        const clamped = Math.min(
+            GUEST_MAX,
+            Math.max(GUEST_MIN, Number(nextValue) || GUEST_MIN)
+        );
+
         guestsEl.value = String(clamped);
         updateStepperState();
     }
 
-    if (guestMinus) {
-        guestMinus.addEventListener("click", (event) => {
-            event.preventDefault();
-            setGuests((Number(guestsEl.value) || GUEST_MIN) - 1);
-        });
+    function setKids(nextValue) {
+        const parsed = Number(nextValue);
+
+        const clamped = Math.min(
+            KIDS_MAX,
+            Math.max(KIDS_MIN, Number.isFinite(parsed) ? parsed : KIDS_MIN)
+        );
+
+        kidsEl.value = String(clamped);
+        updateStepperState();
     }
 
-    if (guestPlus) {
-        guestPlus.addEventListener("click", (event) => {
-            event.preventDefault();
-            setGuests((Number(guestsEl.value) || GUEST_MIN) + 1);
-        });
-    }
+    guestMinus.addEventListener("click", (event) => {
+        event.preventDefault();
+        setGuests((Number(guestsEl.value) || GUEST_MIN) - 1);
+    });
+
+    guestPlus.addEventListener("click", (event) => {
+        event.preventDefault();
+        setGuests((Number(guestsEl.value) || GUEST_MIN) + 1);
+    });
+
+    kidsMinus.addEventListener("click", (event) => {
+        event.preventDefault();
+        setKids((Number(kidsEl.value) || KIDS_MIN) - 1);
+    });
+
+    kidsPlus.addEventListener("click", (event) => {
+        event.preventDefault();
+        setKids((Number(kidsEl.value) || KIDS_MIN) + 1);
+    });
 
     function syncGuestsField() {
         const value = attendingEl.value;
         const notAttending = value === "No";
 
         guestsField.classList.toggle("is-disabled", notAttending);
+        kidsField.classList.toggle("is-disabled", notAttending);
+
         guestsEl.disabled = notAttending;
+        kidsEl.disabled = notAttending;
         guestsEl.required = value === "Yes";
+        kidsEl.required = false;
 
         if (notAttending) {
             guestsEl.value = "0";
-        } else if (value === "Yes" && (!guestsEl.value || Number(guestsEl.value) < GUEST_MIN)) {
-            guestsEl.value = String(GUEST_MIN);
+            kidsEl.value = "0";
+        } else {
+            if (value === "Yes" &&
+                (!guestsEl.value || Number(guestsEl.value) < GUEST_MIN)) {
+                guestsEl.value = String(GUEST_MIN);
+            }
+
+            if (!kidsEl.value || Number(kidsEl.value) < KIDS_MIN) {
+                kidsEl.value = String(KIDS_MIN);
+            }
         }
 
         updateStepperState();
@@ -3880,31 +3869,45 @@ const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbzCjSML8Pwc36lqut
 
     rsvpForm.addEventListener("submit", function (event) {
         event.preventDefault();
-
         setStatus("");
 
-        const name      = nameEl.value.trim();
+        const name = nameEl.value.trim();
         const attending = attendingEl.value;
-        const guests    = attending === "Yes" ? (guestsEl.value.trim() || "1") : "0";
-        const message   = messageEl ? messageEl.value.trim() : "";
+
+        const guests =
+            attending === "Yes" ? (guestsEl.value.trim() || "1") : "0";
+
+        const kids =
+            attending === "Yes" ? (kidsEl.value.trim() || "0") : "0";
+
+        const message = messageEl ? messageEl.value.trim() : "";
 
         if (!name || !attending) {
             setStatus("Please fill in all the required fields.", true);
             return;
         }
 
-        if (attending === "Yes" && (!guests || Number(guests) < 1)) {
+        if (attending === "Yes" &&
+            (!guests || Number(guests) < GUEST_MIN ||
+             Number(guests) > GUEST_MAX)) {
             setStatus("Please enter the number of guests attending.", true);
             return;
         }
 
+        if (attending === "Yes" &&
+            (!kids || Number(kids) < KIDS_MIN ||
+             Number(kids) > KIDS_MAX)) {
+            setStatus("Please enter a valid number of kids attending.", true);
+            return;
+        }
+
         const payload = new URLSearchParams();
+
         payload.append("name", name);
         payload.append("attending", attending);
         payload.append("guests", guests);
+        payload.append("kids", kids);
         payload.append("message", message);
-        payload.append("pageUrl", window.location.href);
-        payload.append("submittedAt", new Date().toISOString());
 
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending...";
@@ -3930,8 +3933,10 @@ const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbzCjSML8Pwc36lqut
     function showThanks(name, attending) {
         if (thanksTextEl) {
             thanksTextEl.textContent = attending === "Yes"
-                ? "Thank you, " + name + "! Your RSVP has been received. We can’t wait to celebrate with you."
-                : "Thank you, " + name + "! We’ve received your response and will miss you at the celebration.";
+                ? "Thank you, " + name +
+                  "! Your RSVP has been received. We can’t wait to celebrate with you."
+                : "Thank you, " + name +
+                  "! We’ve received your response and will miss you at the celebration.";
         }
 
         rsvpForm.style.display = "none";
@@ -3947,35 +3952,16 @@ const RSVP_ENDPOINT = "https://script.google.com/macros/s/AKfycbzCjSML8Pwc36lqut
 const firstsection = document.getElementById("firstsection");
 
 firstsection.addEventListener("click", () => {
-
-    /*
-     * IMPORTANT:
-     * Start music IMMEDIATELY inside the real user tap.
-     *
-     * Do NOT put startWeddingMusic() inside setTimeout().
-     * iOS Safari can block delayed audio playback.
-     */
-
     startWeddingMusic();
 
-    /*
-     * Start the hero transition.
-     */
     firstsection.classList.add("active");
-
     playHeroIntro();
 
-    /*
-     * Keep the existing visual timing.
-     */
     setTimeout(() => {
-
         firstsection.classList.add("hide");
 
         setTimeout(() => {
-
             firstsection.style.display = "none";
-
         }, 1100);
 
     }, 1400);
